@@ -1,0 +1,6 @@
+{
+  "name": "Neumorphic Sign In",
+  "description": "An immersive neumorphic authentication, admin dashboard, and 3D marketing storefront with full product ordering, 3D item management, and customer review & star rating systems.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,259 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #e0e5ec;
+    color: #333333;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+}
+
+/* Atmosphere Light Field */
+.atmosphere {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.45) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Immersive Neumorphic Card */
+.neu-card,
+.neu-container {
+  background: #e0e5ec;
+  border-radius: 60px;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Input Container & Label */
+.neu-input-container {
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.neu-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #8c92ac;
+  margin-bottom: 8px;
+  margin-left: 20px;
+  font-weight: 700;
+  display: block;
+}
+
+/* Inset Input Shadows */
+.neu-input,
+.neu-input-box {
+  width: 100%;
+  border-radius: 30px;
+  background: #e0e5ec;
+  box-shadow: inset 6px 6px 12px #babecc, inset -6px -6px 12px #ffffff;
+  border: none;
+  color: #444444;
+  outline: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.neu-input-box:focus-within,
+.neu-input:focus {
+  box-shadow: inset 7px 7px 14px #b0b4c0, inset -7px -7px 14px #ffffff;
+}
+
+/* Neumorphic Button Standard (Outset) */
+.neu-button {
+  background: #e0e5ec;
+  border-radius: 30px;
+  box-shadow: 6px 6px 14px #babecc, -6px -6px 14px #ffffff;
+  transition: all 0.2s ease-in-out;
+}
+
+.neu-button:hover {
+  box-shadow: 8px 8px 18px #b4b8c6, -8px -8px 18px #ffffff;
+  transform: translateY(-1px);
+}
+
+.neu-button:active {
+  box-shadow: inset 3px 3px 6px #babecc, inset -3px -3px 6px #ffffff;
+  transform: translateY(1px);
+}
+
+/* Main Action Button (Immersive Glow) */
+.btn-main,
+.btn-login {
+  width: 100%;
+  border-radius: 30px;
+  padding: 18px 24px;
+  font-weight: 800;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  color: #ffffff;
+  background: #00e676;
+  box-shadow: 0px 10px 25px rgba(0, 230, 118, 0.4), 0px 4px 10px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-main:hover,
+.btn-login:hover {
+  opacity: 0.94;
+  transform: translateY(-2px);
+  box-shadow: 0px 14px 30px rgba(0, 230, 118, 0.5), 0px 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.btn-main:active,
+.btn-login:active {
+  transform: translateY(1px);
+  box-shadow: 0px 5px 15px rgba(0, 230, 118, 0.35);
+}
+
+/* Floating Immersive Nodes */
+.floating-node,
+.circle-btn {
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 12px 12px 24px rgba(0, 0, 0, 0.12), -10px -10px 20px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+
+.floating-node:hover,
+.circle-btn:hover {
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 16px 16px 30px rgba(0, 0, 0, 0.18), -12px -12px 24px rgba(255, 255, 255, 0.9);
+}
+
+.floating-node:active,
+.circle-btn:active {
+  transform: scale(0.96);
+}
+
+.node-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.88;
+  margin-bottom: 3px;
+  line-height: 1;
+}
+
+/* Node Gradient Variations */
+.node-signup,
+.btn-signup {
+  background: linear-gradient(135deg, #ff9d42, #e65100);
+}
+
+.node-forget,
+.btn-forget {
+  background: linear-gradient(135deg, #d500f9, #aa00ff);
+}
+
+.node-info,
+.btn-back-login {
+  background: linear-gradient(135deg, #2196f3, #1976d2);
+}
+
+.node-support {
+  background: linear-gradient(135deg, #ff1744, #b71c1c);
+}
+
+/* Neumorphic Stat Cards (Inset) */
+.stat-card {
+  background: #e6ebf1;
+  padding: 22px 18px;
+  border-radius: 25px;
+  box-shadow: inset 5px 5px 10px #c2c7ce, inset -5px -5px 10px #ffffff;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.stat-card:hover {
+  box-shadow: inset 6px 6px 12px #b8bdc4, inset -6px -6px 12px #ffffff;
+}
+
+/* 3D Profile Icon */
+.profile-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #60efff, #0011ff);
+  box-shadow: 6px 6px 12px #c2c7ce, -6px -6px 12px #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 8px 8px 16px #b4b8c6, -8px -8px 16px #ffffff;
+}
+
+/* 3D Action Buttons Grid */
+.actions-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  flex: 1;
+  min-width: 140px;
+  padding: 15px 20px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.action-btn:hover {
+  transform: translateY(-3px);
+}
+
+.action-btn:active {
+  transform: translateY(1px);
+}
+
+.btn-green {
+  background: linear-gradient(135deg, #00ff87, #00e676);
+  box-shadow: 0 8px 18px rgba(0, 230, 118, 0.35);
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, #ffb74d, #f57c00);
+  box-shadow: 0 8px 18px rgba(245, 124, 0, 0.35);
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, #e040fb, #aa00ff);
+  box-shadow: 0 8px 18px rgba(170, 0, 255, 0.35);
+}
+
+
